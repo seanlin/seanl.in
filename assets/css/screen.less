@@ -1,5 +1,5 @@
 @import "normalize.less";
-
+// Photo copyright https://www.flickr.com/photos/philborg/11151711953/
 // icons
 
 @font-face {
@@ -345,21 +345,60 @@ margin on the iframe, cause it breaks stuff. */
    4. General - The main styles for the the theme
    ========================================================================== */
 
-   header.main {
-        width:100%;
-        padding:20px 20%;
-        margin:0 0 20px 0;
-        border-bottom: 1px dotted #ccc;
+   html {
 
 
-            h1.blog-title {font-size:2.5rem;}
-            h2.blog-description {font-size:1.5rem;}
+   
    }
 
-   main.content, footer.site-footer {margin:0 20%;}
-   h2.post-title {
-        span.post-meta { color:#999; padding:0 10px 0 0;
+   main.content, header.main-head, footer {margin:0 0 0 10%;}
 
-            a {color:#999;}
+   main.content {
+    width:40%;
+   }
+
+   header.main-head {
+    width:40%;
+    font-size:2rem;
+    padding:30px 0 20px 0;
+   }
+
+   footer {width:45%;}
+  
+ 
+   article {
+    .post-listing { 
+        background: rgba(190,220,250,0.25);   display: inline-block; transition: background ease 0.3s;
+            
+            h2.post-title { margin:0; padding:10px; 
+                a {text-decoration: none; padding:10px;}
+                 span.post-meta { color:#999; padding:0 10px 0 0; font-size:1.5rem;
+                 }
+            }
+    }
+    .post-listing:hover {background: rgba(190,220,250,0.6);box-shadow: 0px 0px 5px rgba(0,0,0,0.2);}
+   }
+
+
+   article.post-detail {
+        h1{ margin:5px 0;
+            
+
+            span {
+                
+                
+                color:#000;
+                
+                margin:0;
+                
+            }
+        }
+        span.post-meta {
+            
+            display: block;
+            color:#000;
+            border-bottom: 1px dotted #ccc;
+
         }
    }
+   
